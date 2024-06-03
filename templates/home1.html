@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Cipher</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Navbar */
+        .navbar-custom {
+            background-color: #007bff; /* Primary color - blue */
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: #ffffff; /* White color */
+        }
+        .navbar-custom .navbar-toggler-icon {
+            border-color: #ffffff; /* White color */
+        }
+        /* Sections */
+        .section-custom {
+            background-color: #f8f9fa; /* Light gray */
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .section-custom h2 {
+            color: #343a40; /* Dark gray */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-custom">
+        <a class="navbar-brand" href="#">Cipher Methods</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="vigenere">Vigenere Cipher</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shift">Shift Cipher</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="playfair">Playfair Cipher</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ceasar">Caesar Cipher</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <!-- Information about each cipher method -->
+        <div id="vigenere" class="section-custom">
+            <h2>Vigenere Cipher</h2>
+            <p>The Vigenère cipher is a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. The encryption process uses a keyword to shift the letters of the plaintext. It is considered more secure than simple substitution ciphers.</p>
+        </div>
+        <hr>
+        <div id="shift" class="section-custom">
+            <h2>Shift Cipher</h2>
+            <p>The Shift cipher, also known as Caesar cipher, is a type of substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet. It is one of the simplest and most widely known encryption techniques.</p>
+        </div>
+        <hr>
+        <div id="playfair" class="section-custom">
+            <h2>Playfair Cipher</h2>
+            <p>The Playfair cipher is a manual symmetric encryption technique that was the first digraph substitution cipher. It employs a 5x5 square grid of letters to encipher pairs of letters from the plaintext. It was used extensively in the early 20th century but is now largely obsolete due to its vulnerability to modern cryptanalysis techniques.</p>
+        </div>
+        <hr>
+        <div id="ceasar" class="section-custom">
+            <h2>Caesar Cipher</h2>
+            <p>The Caesar cipher, also known as the shift cipher, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

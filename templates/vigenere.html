@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenere Cipher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        label {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        input[type="number"],
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        .output h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .output p {
+            font-size: 16px;
+            color: #555;
+        }
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: inline-block;
+            padding: 6px 12px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #6c757d;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .back-btn:hover {
+            background-color: #495057;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-btn">Back</a>
+        <h1>Vigenere Cipher</h1>
+        <form action="/vigenere" method="POST">
+            <label for="choice">Choose Operation:</label><br>
+            <input type="number" name="choice" required><br><br>
+            <label for="plain">Plain Text:</label><br>
+            <textarea name="plain" rows="5" cols="30"></textarea><br><br>
+            <label for="cipher">Cipher Text (for decryption only):</label><br>
+            <textarea name="cipher" rows="5" cols="30"></textarea><br><br>
+            <label for="key">Key:</label><br>
+            <input type="text" name="key" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <div class="output">
+            {% if choice == 1 %}
+                <h2>Encrypted Text:</h2>
+                <p>{{ encrypted_text }}</p>
+            {% elif choice == 2 %}
+                <h2>Decrypted Text:</h2>
+                <p>{{ decrypted_text }}</p>
+            {% else %}
+                <h2>Choose proper operation</h2>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
